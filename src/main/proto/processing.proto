@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option java_package = "com.a7292969.grpcplayground";
+
+service MyService {
+  rpc DrawText (DrawRequest) returns (DrawReply) {}
+}
+
+message DrawRequest {
+  string text = 1;
+}
+
+message DrawReply {
+  bytes pngImage = 1;
+}
