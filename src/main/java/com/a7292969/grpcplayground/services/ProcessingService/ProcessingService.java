@@ -3,6 +3,7 @@ package com.a7292969.grpcplayground.services.ProcessingService;
 import com.a7292969.grpcplayground.MyServiceGrpc;
 import com.a7292969.grpcplayground.Processing;
 import com.google.protobuf.ByteString;
+import io.grpc.Status;
 import io.grpc.stub.StreamObserver;
 import net.devh.boot.grpc.server.service.GrpcService;
 
@@ -27,7 +28,8 @@ public class ProcessingService extends MyServiceGrpc.MyServiceImplBase {
         try {
             ImageIO.write(img, "png", baos);
         } catch (IOException e) {
-            e.printStackTrace();
+            responseObserver.onError(Status.INTERNAL.withDescription(e.getMessage()).asRuntimeException());
+            return;
         }
 
         var reply = Processing.DrawReply.newBuilder()
