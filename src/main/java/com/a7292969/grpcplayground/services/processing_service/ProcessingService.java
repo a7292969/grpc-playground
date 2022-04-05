@@ -1,4 +1,4 @@
-package com.a7292969.grpcplayground.services.ProcessingService;
+package com.a7292969.grpcplayground.services.processing_service;
 
 import com.a7292969.grpcplayground.MyServiceGrpc;
 import com.a7292969.grpcplayground.Processing;

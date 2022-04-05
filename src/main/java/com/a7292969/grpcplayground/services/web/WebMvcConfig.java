@@ -1,4 +1,4 @@
-package com.a7292969.grpcplayground.services.Web;
+package com.a7292969.grpcplayground.services.web;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;

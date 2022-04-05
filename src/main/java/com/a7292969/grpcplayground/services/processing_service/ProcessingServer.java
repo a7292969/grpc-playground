@@ -1,4 +1,4 @@
-package com.a7292969.grpcplayground.services.ProcessingService;
+package com.a7292969.grpcplayground.services.processing_service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

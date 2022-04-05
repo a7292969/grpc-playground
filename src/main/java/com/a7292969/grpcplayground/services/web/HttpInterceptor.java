@@ -1,4 +1,4 @@
-package com.a7292969.grpcplayground.services.Web;
+package com.a7292969.grpcplayground.services.web;
 
 import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Component;
