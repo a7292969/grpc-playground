@@ -7,8 +7,11 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 public class WebMvcConfig implements WebMvcConfigurer {
-    @Autowired
     HttpInterceptor httpInterceptor;
+
+    public WebMvcConfig(HttpInterceptor httpInterceptor) {
+        this.httpInterceptor = httpInterceptor;
+    }
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {

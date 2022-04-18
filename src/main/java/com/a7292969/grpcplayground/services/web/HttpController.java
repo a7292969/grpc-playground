@@ -15,8 +15,11 @@ import javax.servlet.http.HttpServletRequest;
 
 @RestController
 public class HttpController {
-    @Autowired
-    private ProcessingClient firstService;
+    private final ProcessingClient  firstService;
+
+    public HttpController(ProcessingClient firstService) {
+        this.firstService = firstService;
+    }
 
     @GetMapping("/")
     public ResponseEntity<byte[]> root(@RequestParam(value = "text", defaultValue = "Golden Bread") String text) {
